@@ -103,26 +103,6 @@ lstm-text-predictor/
 | `Ctrl + Enter` | New line |
 | `Arrow Keys` | Navigate suggestions |
 
-## 🤖 Model Training
-
-To train your own LSTM model:
-
-1. **Prepare your dataset**
-   ```python
-   # Place your text data in data/training_data.txt
-   ```
-
-2. **Run training script**
-   ```bash
-   cd backend
-   python train.py
-   ```
-
-3. **Model parameters**
-   - Sequence length: 40 characters
-   - LSTM units: 256
-   - Dropout: 0.3
-   - Epochs: 50
 
 ## 🔧 API Endpoints
 
