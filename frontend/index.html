@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Text Composer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Smart Text Composer</h1>
+            <p>Start typing and press Tab to accept suggestions</p>
+            <div class="status-indicator">
+                <span id="status-dot" class="status-dot"></span>
+                <span id="status-text">Connecting...</span>
+            </div>
+        </header>
+
+        <div class="composer-container">
+            <div class="editor-wrapper">
+                <div id="editor" class="editor" contenteditable="true" placeholder="Start typing your message..."></div>
+                <div id="predictions" class="predictions-overlay"></div>
+                <div id="loading" class="loading-spinner">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+
+            <div class="suggestions-panel">
+                <h3>Word Suggestions</h3>
+                <div id="suggestions-list" class="suggestions-list">
+                    <div class="no-suggestions">Start typing to see suggestions</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="shortcuts">
+                <span class="shortcut-item">
+                    <kbd>Tab</kbd> Accept first suggestion
+                </span>
+                <span class="shortcut-item">
+                    <kbd>Esc</kbd> Clear suggestions
+                </span>
+            </div>
+            <div class="actions">
+                <button id="clear-btn" class="btn btn-secondary">Clear Text</button>
+                <button id="copy-btn" class="btn btn-primary">Copy Text</button>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-label">Words:</span>
+                <span id="word-count">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Characters:</span>
+                <span id="char-count">0</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
